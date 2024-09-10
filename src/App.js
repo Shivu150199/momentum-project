@@ -10,7 +10,7 @@ function App() {
         <section className="w-screen h-[100vh] flex">
             <Sidebar />
             <div className="flex-1 flex-col">
-                <div className="flex-[.030] flex items-center p-4 bg-[#363636] text-base font-medium text-white border-b-2">
+                <div className="flex-[.030] flex items-center p-4 bg-[#363636] text-base font-medium text-white border-b-[1px] border-[#858585]">
                     <h2>Configure Flows</h2>
                 </div>
                 {/* Hero container */}
