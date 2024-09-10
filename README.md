@@ -1,70 +1,114 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Project Link
+**GitHub Repository**: https://github.com/Shivu150199/momentum-project
+**Deployed link**: https://momentum-project.onrender.com/
 
-In the project directory, you can run:
 
-### `npm start`
+### Overview
+This project is designed to visualize a graph using data fetched from a mock API. The frontend is built with **Create React App (CRA)** for a seamless React environment. The **React Flow** library is used to manage and render the graph, while **Tailwind CSS** provides a utility-first approach to styling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technologies Used
+- **React (CRA)**: A JavaScript library for building user interfaces.
+- **React Flow**: A library for building interactive node-based graphs.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Project Structure
+```bash
+├── public
+├── src
+│   ├── assets       # Static files and images
+│   ├── components   # Reusable components such as Graph, Node, etc.
+│   ├── styles       # Tailwind configuration and global styles
+│   └── App.js       # Main application component
+├── tailwind.config.js  # Tailwind CSS configuration
+└── package.json     # Project dependencies and scripts
+```
 
-### `npm test`
+### Key Features
+1. **Graph Visualization**:
+   - Displays a dynamic graph based on data received from the mock API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Tailwind CSS Styling**:
+   - Clean and responsive user interface.
 
-### `npm run build`
+### Installation and Setup
+Follow these steps to set up and run the project locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
+   ```bash
+   git clone repo url
+   cd foldername
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run the project:**
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+### Usage
+1. **Graph Component**:
+   The `Graph` component is responsible for rendering the graph. It uses React Flow to display nodes and edges, which are passed as props from the API response.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Custom Styling**:
+   Tailwind CSS is applied to ensure the layout is responsive and visually appealing. Custom utility classes can be configured in the `tailwind.config.js` file.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tailwind CSS Configuration
+To modify the theme, colors, or spacing for the Tailwind CSS styles, update the `tailwind.config.js` file.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To set up Tailwind CSS in your project, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Install Tailwind CSS via npm:**
 
-## Learn More
+   Run the following command to install Tailwind CSS along with its required dependencies:
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Generate Tailwind Configuration Files:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Once Tailwind is installed, generate the `tailwind.config.js` and `postcss.config.js` files by running:
+   ```bash
+   npx tailwindcss init -p
+   ```
 
-### Code Splitting
+   This will create a `tailwind.config.js` file for configuring your Tailwind setup.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Configure Tailwind:**
 
-### Analyzing the Bundle Size
+   In your `tailwind.config.js`, configure the content property to point to all the files in your project that will use Tailwind's utility classes:
+   ```js
+   module.exports = {
+     content: [
+       './src/**/*.{js,jsx,ts,tsx}',
+     ],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   }
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Add Tailwind Directives to CSS:**
 
-### Making a Progressive Web App
+   In your CSS file (usually located in `src/styles/global.css` or `src/index.css`), add the following Tailwind directives:
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. **Run the Project:**
 
-### Advanced Configuration
+   After configuring Tailwind CSS, you can run the project using:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This will ensure Tailwind CSS is properly set up and ready to be used for styling your project.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
