@@ -7,5 +7,6 @@ import logo from './logo.svg'
 import git from './git.svg'
 import alert from './alert.svg'
 import layer from './layer.svg'
+import graphLink from './graphLink.svg'
 
-export {plus,menu ,time,profile,link,logo,alert,git,layer}
+export {plus,menu ,time,profile,link,logo,alert,git,layer,graphLink}

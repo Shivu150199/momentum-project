@@ -1,6 +1,7 @@
 import link from "../assets/link.svg";
 import React from "react";
 import { Handle } from "react-flow-renderer";
+import { graphLink } from "../assets";
 
 const CustomNode = ({ data }) => {
  
@@ -12,7 +13,7 @@ const CustomNode = ({ data }) => {
                 <h3 className="text-white font-md" title={data.label}>
                     {data.label.length > 20 ? `${data.label.substring(0, 20)}...` : data.label}
                 </h3>
-                <img src={link} alt="Link icon" className="w-4 h-4" />
+                <img src={graphLink} alt="Link icon" className="w-4 h-4" />
             </div>
 
             {/* Parameters */}
