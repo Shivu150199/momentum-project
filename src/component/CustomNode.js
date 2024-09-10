@@ -20,11 +20,15 @@ const CustomNode = ({ data }) => {
             <div className="flex items-center gap-1 text-white text-[10px] p-2">
                 <span className="text-orange-400">Params</span>:
                 {data.params && data.params.length > 0 ? (
-                    `[${Object.keys(data.params[0]).map((item, i) => (
-                        <span key={i} className="text-white mr-2">
-                            {item}
-                        </span>
-                    ))}]`
+                       <span className="text-white mr-2">
+                       [
+                       {Object.entries(data.params[0]).map(([key, value], i) => (
+                           <span key={i} className="text-white mr-2">
+                               {key}
+                           </span>
+                       ))}
+                       ]
+                   </span>
                 ) : (
                     <span className="text-gray-400 ml-2">
                         No params available
