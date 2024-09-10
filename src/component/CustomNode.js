@@ -3,7 +3,7 @@ import React from "react";
 import { Handle } from "react-flow-renderer";
 
 const CustomNode = ({ data }) => {
-    console.log(data);
+ 
 
     return (
         <div className="border-[1px] border-orange-400 rounded-md bg-[#181e25]">
